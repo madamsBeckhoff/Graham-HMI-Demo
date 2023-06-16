@@ -55,35 +55,7 @@
   "userControls": [],
   "content": [
     {
-      "url": "Pages/StartPage.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/Security.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Trend.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Scope.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Historize.content",
+      "url": "Pages/Connection.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -97,7 +69,35 @@
       "preloadBindings": false
     },
     {
-      "url": "Pages/Connection.content",
+      "url": "Pages/DynamicGraphing/Historize.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/DynamicGraphing/Scope.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/DynamicGraphing/Trend.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Security.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/StartPage.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -180,6 +180,24 @@
         "type": "tchmi:framework#/definitions/TcHmi.Functions.BaseTemplate.AffectedControlList",
         "persist": true,
         "readonly": true
+      },
+      "Button1_Security_Guest": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "Button2_Security_Guest": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "Button3_Security_Guest": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
       }
     },
     "themedResources": {
