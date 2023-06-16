@@ -1,0 +1,13 @@
+{
+  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.42/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
+  "locale": "de",
+  "localizedText": {
+    "L_StartPage": "Startseite",
+    "L_Security": "Security",
+    "L_Trend": "Trend",
+    "L_Scope": "Scope",
+    "L_Historize": "Historize",
+    "L_DynamicGraphing": "Dynamic Graphing",
+    "L_Connection": "Connection"
+  }
+}
