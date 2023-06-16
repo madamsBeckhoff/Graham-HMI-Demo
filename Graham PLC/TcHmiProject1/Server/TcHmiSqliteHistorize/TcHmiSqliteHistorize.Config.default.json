@@ -1,0 +1,28 @@
+{
+    "commitInterval": "PT10S",
+    "enableBackup": false,
+    "historizedSymbolList": {
+        "ADS.PLC1.GVL_HMI.lr_Heater1": {
+            "interval": "PT0.5S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.GVL_HMI.lr_Heater2": {
+            "interval": "PT0.5S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        },
+        "ADS.PLC1.GVL_HMI.lr_Heater3": {
+            "interval": "PT0.5S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 100000
+        }
+    },
+    "inMemory": false,
+    "maxBackups": 1,
+    "mode": 3,
+    "vacuumOnStartup": false
+}

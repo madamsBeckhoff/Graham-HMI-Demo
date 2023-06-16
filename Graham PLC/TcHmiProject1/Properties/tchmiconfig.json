@@ -55,35 +55,7 @@
   "userControls": [],
   "content": [
     {
-      "url": "Pages/StartPage.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/Security.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Trend.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Scope.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Pages/DynamicGraphing/Historize.content",
+      "url": "Pages/Connection.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -97,7 +69,35 @@
       "preloadBindings": false
     },
     {
-      "url": "Pages/Connection.content",
+      "url": "Pages/DynamicGraphing/Historize.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/DynamicGraphing/Scope.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/DynamicGraphing/Trend.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Security.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/StartPage.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -386,6 +386,10 @@
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
       "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.ScopeControl",
+      "basePath": "/Beckhoff.TwinCAT.HMI.ScopeControl"
     }
   ],
   "keyboardLayouts": [

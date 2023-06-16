@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
+	<LicenseInfo>
+		<SystemId>{14A4C553-CA1A-5EEB-78E9-C88A71199066}</SystemId>
+		<IssueTime>2023-06-16T19:20:00</IssueTime>
+		<ExpireTime>2023-06-24T00:00:00</ExpireTime>
+		<LicenseKey>76407bc3c81764bb819c7e72513fe12eb7f3253fe567bb80162908abee246c4d607f02264b12c3eea8c5e3d230860d1ded66d8a56680d59e1536f3f5a4bb4f230d8b56d504807be4cd1e4e938e06b27aa8f2f1d7b3439bf7fa3d7bc7de286c448c8fbb3ff737ef561be3288af67608991aff54098738925a30994341ce7f53b9db0e6afd4f29a7c90d1223bf0cb60e9b4b20c32320e96413074cb0ee0c7b1e7b89fb6ca7b896b464160faa239616e0946550fbee9fdc1665a78328a9018615260cbbdc81b0071b8ea8865b2322fded4e3e669425f90b5ff6624a660a741be906d0c49908f9e181bc8e79e13ad4e0718f98ee6eda36a85fc1b95a268895f100e8</LicenseKey>
+		<License>
+			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
+			<Name>TC3 ADS</Name>
+			<OrderNo>TC1000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId>
+			<Name>TC3 IO</Name>
+			<OrderNo>TC1100</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>
+			<Name>TC3 PLC</Name>
+			<OrderNo>TC1200</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{37E5160D-987B-4640-888D-0F97727B53E2}</LicenseId>
+			<Name>TC3 HMI Clients</Name>
+			<Instances>1</Instances>
+		</License>
+		<License>
+			<LicenseId>{A2091C4C-7D04-4202-B173-9984E7125BC0}</LicenseId>
+			<Name>TC3 HMI Targets</Name>
+			<Instances>1</Instances>
+		</License>
+		<License>
+			<LicenseId>{796D380F-D49E-4C0C-A05F-500052FAC883}</LicenseId>
+			<Name>TC3 HMI Server</Name>
+			<OrderNo>TF2000</OrderNo>
+		</License>
+	</LicenseInfo>
+</TcLicenseInfo>
