@@ -15,7 +15,11 @@
 		</System>
 		<Plc>
 			<Project GUID="{C1CA1D4B-0B8D-4F22-8D3A-686BFBCD6E45}" Name="Graham PLC" PrjFilePath="Graham PLC\Graham PLC.plcproj" TmcFilePath="Graham PLC\Graham PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+<<<<<<< HEAD
 				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Graham PLC\Graham PLC.tmc" TmcHash="{DD0BAFB9-3E3D-02B7-105D-6C0D777F1295}">
+=======
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{DD0BAFB9-3E3D-02B7-105D-6C0D777F1295}">
+>>>>>>> main
 					<Name>Graham PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>

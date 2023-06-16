@@ -1,5 +1,17 @@
 {
     "USERS": {
+        "User1": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "346f7d8e152ef2da0a0385c07b4ebab70bd632410660a134a96f068639aef35bda01a99740cc2c1b3c0a2037a8c058b1da2b8d60264ceee4b682481ae40249eb",
+            "SALT": "iX6+iXXOndnBu47RjTMczawe1l+sPME5EFt9rueNRUvWB1t3d5NiOeTEt3a0p1shoAsk/BxPpND8nnkxJh5B2Q=="
+        },
+        "User2": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "5ff1c77f4f5665e0f5c93765ffee2be1553f9dbf5b91b50d404fe1be7e3c6c9813f2192eb058977e6eb3448c281ce4933822d5156d32a68a9b1c01bf4c7c6213",
+            "SALT": "KLQ4DfUvuw1zZJJKfKN3XvPtuwkUOoTjOctKXlgNi5ZlFf9T7S8lWRs1dyqCXkBbThk8xSRXPSSeUNM/nnDgwg=="
+        },
         "__SystemAdministrator": {
             "ALGORITHM": 0,
             "ENABLED": false,
