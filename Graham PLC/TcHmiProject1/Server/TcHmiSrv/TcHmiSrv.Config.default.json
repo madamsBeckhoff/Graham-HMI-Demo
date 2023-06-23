@@ -2552,6 +2552,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.Tag": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::Tag",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/STRING%2880%29"
+            },
+            "USEMAPPING": true
+        },
         "RefreshDefinitions": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
@@ -7603,6 +7613,7 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.MAIN.Tag": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiScope.ChangeChannelState": 3,

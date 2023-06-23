@@ -3,15 +3,19 @@
   <POU Name="MAIN" Id="{ef855cf7-09d5-4b6d-8cc8-57901565fc59}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+Tag:STRING:= 'Allow';
+
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Signal_Generator();
+
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
-      <LineId Id="6" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

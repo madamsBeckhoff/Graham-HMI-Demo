@@ -11,6 +11,14 @@
       },
       {
         "publishServerExtension": true,
+        "name": "TcHmiScope"
+      },
+      {
+        "publishServerExtension": true,
+        "name": "TcHmiSqliteHistorize"
+      },
+      {
+        "publishServerExtension": true,
         "name": "TcHmiSqliteLogger"
       },
       {

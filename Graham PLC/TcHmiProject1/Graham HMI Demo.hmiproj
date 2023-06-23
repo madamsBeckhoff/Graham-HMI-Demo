@@ -22,7 +22,7 @@
     <TargetFramework>native1.12-tchmi</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
     <Name>Graham HMI Demo</Name>
-    <HmiCommunicationRouterPort>10101</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10102</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13000</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.42</HmiInitial>
     <HmiRecent>1.12.760.42</HmiRecent>
@@ -138,7 +138,25 @@
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
     </Content>
+    <Content Include="Images\Actions.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\Graham Logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\html.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Internalsymbols.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Setswitch.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Settag.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Setupsecurity.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Pages\Connection.content">

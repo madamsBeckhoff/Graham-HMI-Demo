@@ -184,19 +184,37 @@
       "Button1_Security_Guest": {
         "value": "Allow",
         "type": "tchmi:general#/definitions/String",
-        "persist": false,
+        "persist": true,
         "readonly": false
       },
       "Button2_Security_Guest": {
         "value": "Allow",
         "type": "tchmi:general#/definitions/String",
-        "persist": false,
+        "persist": true,
         "readonly": false
       },
       "Button3_Security_Guest": {
         "value": "Allow",
         "type": "tchmi:general#/definitions/String",
-        "persist": false,
+        "persist": true,
+        "readonly": false
+      },
+      "Button1_Security_Admin": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
+        "readonly": false
+      },
+      "Button2_Security_Admin": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
+        "readonly": false
+      },
+      "Button3_Security_Admin": {
+        "value": "Allow",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
         "readonly": false
       }
     },

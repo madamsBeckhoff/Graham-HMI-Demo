@@ -1,6 +1,6 @@
 <div id="Security" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
 
-<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="57" data-tchmi-left-unit="px" data-tchmi-text="Button 1" data-tchmi-top="64" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="41" data-tchmi-left-unit="px" data-tchmi-top="29" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="Button 1">
 
     <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
         [
@@ -17,7 +17,7 @@
         {
         "accessright": "operate",
         "group": "Admin",
-        "permission": "Allow"
+        "permission": "%i%Button1_Security_Admin%/i%"
         },
         {
         "accessright": "observe",
@@ -27,7 +27,7 @@
         ]
     </script>
 </div>
-<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="57" data-tchmi-left-unit="px" data-tchmi-text="Button 2" data-tchmi-top="169" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="41" data-tchmi-left-unit="px" data-tchmi-text="Button 2" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
 
     <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
         [
@@ -44,7 +44,7 @@
         {
         "accessright": "operate",
         "group": "Admin",
-        "permission": "Allow"
+        "permission": "%i%Button2_Security_Admin%/i%"
         },
         {
         "accessright": "observe",
@@ -54,7 +54,7 @@
         ]
     </script>
 </div>
-<div id="TcHmiButton_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="57" data-tchmi-left-unit="px" data-tchmi-text="Button 3" data-tchmi-top="271" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="41" data-tchmi-left-unit="px" data-tchmi-text="Button 3" data-tchmi-top="211" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
 
     <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
         [
@@ -76,12 +76,12 @@
         {
         "accessright": "operate",
         "group": "Admin",
-        "permission": "Allow"
+        "permission": "%i%Button3_Security_Admin%/i%"
         }
         ]
     </script>
 </div>
-<div id="TcHmiToggleSwitch" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="284" data-tchmi-left-unit="px" data-tchmi-text="Switch 1" data-tchmi-top="77" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px">
+<div id="TcHmiToggleSwitch" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="29" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
 
 <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
 [
@@ -191,11 +191,91 @@
         "asyncWait": true
       }
     ]
+  },
+  {
+    "event": "TcHmiToggleSwitch.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button1_Security_Guest%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
   }
 ]
 </script>
 </div>
-<div id="TcHmiToggleSwitch_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="284" data-tchmi-left-unit="px" data-tchmi-text="Switch 2 " data-tchmi-top="182" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px">
+<div id="TcHmiToggleSwitch_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
 
 <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
 [
@@ -303,11 +383,91 @@
         "asyncWait": true
       }
     ]
+  },
+  {
+    "event": "TcHmiToggleSwitch_1.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button2_Security_Guest%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_1::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_1::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_1::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_1::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
   }
 ]
 </script>
 </div>
-<div id="TcHmiToggleSwitch_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="284" data-tchmi-left-unit="px" data-tchmi-text="Switch 3" data-tchmi-top="285" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px">
+<div id="TcHmiToggleSwitch_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="211" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
 
 <script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
 [
@@ -415,6 +575,888 @@
         "asyncWait": true
       }
     ]
+  },
+  {
+    "event": "TcHmiToggleSwitch_2.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button3_Security_Guest%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_2::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_2::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_2::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_2::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+<div id="TcHmiToggleSwitch_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="65" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiToggleSwitch_3.onToggleStateChanged",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::ToggleState%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button1_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button1_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Deny"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiToggleSwitch_3.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button1_Security_Admin%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_3::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmiToggleSwitch_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="155" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiToggleSwitch_4.onToggleStateChanged",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::ToggleState%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button2_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button2_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Deny"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiToggleSwitch_4.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button2_Security_Admin%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_4::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmiToggleSwitch_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="184" data-tchmi-left-unit="px" data-tchmi-top="245" data-tchmi-top-unit="px" data-tchmi-width="110" data-tchmi-width-unit="px" data-tchmi-text="Allowed">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Allow"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiToggleSwitch_5.onToggleStateChanged",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::ToggleState%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button3_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%i%Button3_Security_Admin%/i%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Deny"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "TcHmiToggleSwitch_5.onAttached",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%Button3_Security_Admin%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allow"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Normal"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Allowed"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::ToggleState%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiToggleSwitch_5::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Denied"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="21" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Admin" data-tchmi-top="160" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="21" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Admin" data-tchmi-top="252" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Guest" data-tchmi-top="29" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Guest" data-tchmi-top="211" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Guest" data-tchmi-top="119" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="21" data-tchmi-height-unit="px" data-tchmi-left="320" data-tchmi-left-unit="px" data-tchmi-text="Admin" data-tchmi-top="65" data-tchmi-top-unit="px" data-tchmi-width="38" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+</div>
+<div id="TcHmiTextblock_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="386" data-tchmi-left-unit="px" data-tchmi-text="Steps for security setup:" data-tchmi-top="29" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="179" data-tchmi-height-unit="px" data-tchmi-left="817" data-tchmi-left-unit="px" data-tchmi-src="Images/Setupsecurity.png" data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="176" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="386" data-tchmi-left-unit="px" data-tchmi-src="Images/Internalsymbols.png" data-tchmi-top="55" data-tchmi-top-unit="px" data-tchmi-width="419" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="292" data-tchmi-height-unit="px" data-tchmi-left="386" data-tchmi-left-unit="px" data-tchmi-src="Images/html.png" data-tchmi-top="245" data-tchmi-top-unit="px" data-tchmi-width="419" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="290" data-tchmi-height-unit="px" data-tchmi-left="817" data-tchmi-left-unit="px" data-tchmi-src="Images/Actions.png" data-tchmi-top="247" data-tchmi-top-unit="px" data-tchmi-width="176" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="268" data-tchmi-height-unit="px" data-tchmi-left="1006" data-tchmi-left-unit="px" data-tchmi-src="Images/Settag.png" data-tchmi-top="65" data-tchmi-top-unit="px" data-tchmi-width="437" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  }
+]
+</script>
+</div>
+<div id="TcHmi_Controls_Beckhoff_TcHmiImage_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="268" data-tchmi-height-unit="px" data-tchmi-left="1006" data-tchmi-left-unit="px" data-tchmi-src="Images/Setswitch.png" data-tchmi-top="345" data-tchmi-top-unit="px" data-tchmi-width="437" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+[
+  {
+    "accessright": "operate",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "operate",
+    "group": "Guest",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Admin",
+    "permission": "Deny"
+  },
+  {
+    "accessright": "observe",
+    "group": "Guest",
+    "permission": "Deny"
   }
 ]
 </script>
