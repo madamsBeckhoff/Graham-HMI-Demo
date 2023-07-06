@@ -1,17 +1,16 @@
-<div id="Trend" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
-
-<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="%f%Latest%/f%" data-tchmi-height="400" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-start="%f%First%/f%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="730" data-tchmi-width-unit="px" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4">
+<div id="Trend" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="600">
+<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height="56.5" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-visibility="Visible" data-tchmi-show-legend="true" data-tchmi-show-menu-bar="true" data-tchmi-menu-bar-position="Top" data-tchmi-show-x-axis-name="true" data-tchmi-start="%s%TrendStart%/s%">
 <script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
 [
   {
     "id": 1,
     "showAxis": true,
     "position": "Left",
-    "mainTickMinValue": 0.0,
-    "mainTickMaxValue": 100.0,
+    "mainTickMinValue": 50.0,
+    "mainTickMaxValue": 325.0,
     "showLabels": true,
     "showAxisName": true,
-    "axisName": "Temp 1 axis",
+    "axisName": "Temperature",
     "axisNameFontFamily": "",
     "axisNameFontSize": 15,
     "axisNameFontSizeUnit": "px",
@@ -21,19 +20,19 @@
     "autoScaling": false,
     "logarithmicScale": false,
     "axisLabeling": "Number",
-    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisLabelFontColor%/tr%",
+    "labelFontColor": null,
     "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
     "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
   },
   {
     "id": 2,
-    "showAxis": true,
+    "showAxis": false,
     "position": "Left",
-    "mainTickMinValue": 0.0,
-    "mainTickMaxValue": 100.0,
+    "mainTickMinValue": 50.0,
+    "mainTickMaxValue": 325.0,
     "showLabels": true,
     "showAxisName": true,
-    "axisName": "Temp 2 axis",
+    "axisName": "Temp 2",
     "axisNameFontFamily": "",
     "axisNameFontSize": 15,
     "axisNameFontSizeUnit": "px",
@@ -43,11 +42,9 @@
     "autoScaling": false,
     "logarithmicScale": false,
     "axisLabeling": "Number",
-    "labelFontColor": {
-      "color": "rgba(71, 148, 218, 1)"
-    },
+    "labelFontColor": null,
     "axisColor": {
-      "color": "rgba(71, 148, 218, 1)"
+      "color": "rgba(234, 21, 41, 1)"
     },
     "axisNameFontColor": {
       "color": "rgba(71, 148, 218, 1)"
@@ -55,13 +52,13 @@
   },
   {
     "id": 3,
-    "showAxis": true,
+    "showAxis": false,
     "position": "Left",
-    "mainTickMinValue": 0.0,
-    "mainTickMaxValue": 100.0,
+    "mainTickMinValue": 50.0,
+    "mainTickMaxValue": 325.0,
     "showLabels": true,
     "showAxisName": true,
-    "axisName": "Temp 3 axis",
+    "axisName": "Temp 3",
     "axisNameFontFamily": "",
     "axisNameFontSize": 15,
     "axisNameFontSizeUnit": "px",
@@ -71,11 +68,9 @@
     "autoScaling": false,
     "logarithmicScale": false,
     "axisLabeling": "Number",
-    "labelFontColor": {
-      "color": "rgba(71, 148, 218, 1)"
-    },
+    "labelFontColor": null,
     "axisColor": {
-      "color": "rgba(71, 148, 218, 1)"
+      "color": "rgba(25, 208, 80, 1)"
     },
     "axisNameFontColor": {
       "color": "rgba(71, 148, 218, 1)"
@@ -89,14 +84,16 @@
 [
   {
     "yAxisId": 1,
-    "legendName": "",
+    "legendName": "Heater 1 Temp",
     "scaleFactor": 1.0,
     "showAxis": true,
     "lineWidth": 1,
     "pointDot": false,
     "pointDotRadius": 3,
     "pointDotStrokeWidth": 1,
-    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionLineColor%/tr%",
+    "lineColor": {
+      "color": "rgba(44, 9, 244, 1)"
+    },
     "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
     "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
     "pointDotInStopMode": true,
@@ -107,14 +104,16 @@
   },
   {
     "yAxisId": 2,
-    "legendName": "",
+    "legendName": "Heater 2 Temp",
     "scaleFactor": 1.0,
     "showAxis": true,
     "lineWidth": 1,
     "pointDot": false,
     "pointDotRadius": 3,
     "pointDotStrokeWidth": 1,
-    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionLineColor%/tr%",
+    "lineColor": {
+      "color": "rgba(233, 14, 14, 1)"
+    },
     "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
     "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
     "pointDotInStopMode": true,
@@ -125,14 +124,16 @@
   },
   {
     "yAxisId": 3,
-    "legendName": "",
+    "legendName": "Heater 3 Temp",
     "scaleFactor": 1.0,
     "showAxis": true,
     "lineWidth": 1,
     "pointDot": false,
     "pointDotRadius": 3,
     "pointDotStrokeWidth": 1,
-    "lineColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionLineColor%/tr%",
+    "lineColor": {
+      "color": "rgba(49, 238, 16, 1)"
+    },
     "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
     "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
     "pointDotInStopMode": true,
@@ -144,10 +145,67 @@
 ]
 </script>
 </div>
-<div id="TcHmiCheckbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="13" data-tchmi-left-unit="px" data-tchmi-text="Checkbox" data-tchmi-top="455" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
-</div>
-<div id="TcHmiCheckbox_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="156" data-tchmi-left-unit="px" data-tchmi-text="Checkbox" data-tchmi-top="455" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
-</div>
-<div id="TcHmiCheckbox_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCheckbox" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="300" data-tchmi-left-unit="px" data-tchmi-text="Checkbox" data-tchmi-top="455" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
+<div id="TcHmiToggleButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Toggle Button" data-tchmi-top="379" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiToggleButton.onToggleStateChanged",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "symbolExpression": "%ctrl%TcHmiToggleButton::ToggleState%/ctrl%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/ToggleState",
+                  "value": "Active"
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription[0]::symbol%/ctrl%",
+                "value": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "ADS.PLC1.GVL_HMI.lr_Heater1\r\n"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription[0]::symbol%/ctrl%",
+                "value": {
+                  "objectType": "FunctionExpression",
+                  "functionExpression": "ADS.PLC1.GVL_HMI.lr_Heater2\r\n"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
 </div>

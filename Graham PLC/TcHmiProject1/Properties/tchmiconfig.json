@@ -1,5 +1,5 @@
 {
-  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.42/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.44/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -215,6 +215,47 @@
         "value": "Allow",
         "type": "tchmi:general#/definitions/String",
         "persist": true,
+        "readonly": false
+      },
+      "MyTrendData": {
+        "value": [
+          {
+            "Color": {
+              "color": "rgba(241, 24, 24, 1)"
+            },
+            "Enabled": true,
+            "Name": "ADS.PLC1.GVL_HMI.lr_Heater1"
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          },
+          {
+            "Enabled": false
+          }
+        ],
+        "type": "tchmi:project#/definitions/Array(0..9) OF TrendEnable",
+        "persist": false,
         "readonly": false
       }
     },

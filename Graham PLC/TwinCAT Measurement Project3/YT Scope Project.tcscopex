@@ -77,11 +77,11 @@
           <DataType>REAL64</DataType>
           <DisplayColor>Black</DisplayColor>
           <Enabled>true</Enabled>
-          <FileHandle>0</FileHandle>
+          <FileHandle>1</FileHandle>
           <ForceOversampling>false</ForceOversampling>
           <Guid>d1f2f8fe-8b42-42c6-bcf3-fcaeeaa2164f</Guid>
           <IndexGroup>16448</IndexGroup>
-          <IndexOffset>385008</IndexOffset>
+          <IndexOffset>385120</IndexOffset>
           <IsHistorical>false</IsHistorical>
           <Name>lr_Heater1</Name>
           <Oversample>0</Oversample>
@@ -159,11 +159,11 @@
           <DataType>REAL64</DataType>
           <DisplayColor>Black</DisplayColor>
           <Enabled>true</Enabled>
-          <FileHandle>0</FileHandle>
+          <FileHandle>2</FileHandle>
           <ForceOversampling>false</ForceOversampling>
           <Guid>df73aa99-61ed-45d0-8be0-12e106daba57</Guid>
           <IndexGroup>16448</IndexGroup>
-          <IndexOffset>385016</IndexOffset>
+          <IndexOffset>385128</IndexOffset>
           <IsHistorical>false</IsHistorical>
           <Name>lr_Heater2</Name>
           <Oversample>0</Oversample>
@@ -241,11 +241,11 @@
           <DataType>REAL64</DataType>
           <DisplayColor>Black</DisplayColor>
           <Enabled>true</Enabled>
-          <FileHandle>0</FileHandle>
+          <FileHandle>3</FileHandle>
           <ForceOversampling>false</ForceOversampling>
           <Guid>d8797da3-81d1-449f-9f31-5be53bfbb3e7</Guid>
           <IndexGroup>16448</IndexGroup>
-          <IndexOffset>385024</IndexOffset>
+          <IndexOffset>385136</IndexOffset>
           <IsHistorical>false</IsHistorical>
           <Name>lr_Heater3</Name>
           <Oversample>0</Oversample>

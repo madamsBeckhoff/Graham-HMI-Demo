@@ -4,7 +4,8 @@
 		<System>
 			<Licenses>
 				<Target>
-					<ManualSelect>{796D380F-D49E-4C0C-A05F-500052FAC883}</ManualSelect>
+					<ManualSelect>{27326EE5-AB30-4084-B15B-8CCA96CCBF0B}</ManualSelect>
+					<ManualSelect>{3DDCAB25-BF0E-412C-A721-DC77C1B8099C}</ManualSelect>
 				</Target>
 			</Licenses>
 			<Tasks>
@@ -15,7 +16,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{C1CA1D4B-0B8D-4F22-8D3A-686BFBCD6E45}" Name="Graham PLC" PrjFilePath="Graham PLC\Graham PLC.plcproj" TmcFilePath="Graham PLC\Graham PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Graham PLC\Graham PLC.tmc" TmcHash="{DD9836EF-0B8F-D76C-1BCD-B4F9D3E232A4}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Graham PLC\Graham PLC.tmc" TmcHash="{F3DF49A1-0C8F-0D82-3D54-7E15AFA4528B}">
 					<Name>Graham PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>

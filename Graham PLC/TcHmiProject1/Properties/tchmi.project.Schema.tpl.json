@@ -1,4 +1,27 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {}
+  "definitions": {
+    "TrendEnable": {
+      "properties": {
+        "Color": {
+          "$ref": "tchmi:framework#/definitions/Color"
+        },
+        "Enabled": {
+          "$ref": "tchmi:general#/definitions/Boolean"
+        },
+        "Name": {
+          "$ref": "tchmi:general#/definitions/String"
+        }
+      },
+      "type": "object"
+    },
+    "Array(0..9) OF TrendEnable": {
+      "items": {
+        "$ref": "tchmi:project#/definitions/TrendEnable"
+      },
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10
+    }
+  }
 }
