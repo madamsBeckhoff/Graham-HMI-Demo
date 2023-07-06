@@ -1,211 +1,160 @@
 <div id="Trend" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="600">
-<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height="56.5" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-visibility="Visible" data-tchmi-show-legend="true" data-tchmi-show-menu-bar="true" data-tchmi-menu-bar-position="Top" data-tchmi-show-x-axis-name="true" data-tchmi-start="%s%TrendStart%/s%">
-<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
-[
-  {
-    "id": 1,
-    "showAxis": true,
-    "position": "Left",
-    "mainTickMinValue": 50.0,
-    "mainTickMaxValue": 325.0,
-    "showLabels": true,
-    "showAxisName": true,
-    "axisName": "Temperature",
-    "axisNameFontFamily": "",
-    "axisNameFontSize": 15,
-    "axisNameFontSizeUnit": "px",
-    "axisNameFontWeight": "Bold",
-    "decimalPlaces": 2,
-    "unit": "",
-    "autoScaling": false,
-    "logarithmicScale": false,
-    "axisLabeling": "Number",
-    "labelFontColor": null,
-    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisColor%/tr%",
-    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiTrendLineChart::YAxisAxisNameFontColor%/tr%"
-  },
-  {
-    "id": 2,
-    "showAxis": false,
-    "position": "Left",
-    "mainTickMinValue": 50.0,
-    "mainTickMaxValue": 325.0,
-    "showLabels": true,
-    "showAxisName": true,
-    "axisName": "Temp 2",
-    "axisNameFontFamily": "",
-    "axisNameFontSize": 15,
-    "axisNameFontSizeUnit": "px",
-    "axisNameFontWeight": "Bold",
-    "decimalPlaces": 2,
-    "unit": "",
-    "autoScaling": false,
-    "logarithmicScale": false,
-    "axisLabeling": "Number",
-    "labelFontColor": null,
-    "axisColor": {
-      "color": "rgba(234, 21, 41, 1)"
-    },
-    "axisNameFontColor": {
-      "color": "rgba(71, 148, 218, 1)"
-    }
-  },
-  {
-    "id": 3,
-    "showAxis": false,
-    "position": "Left",
-    "mainTickMinValue": 50.0,
-    "mainTickMaxValue": 325.0,
-    "showLabels": true,
-    "showAxisName": true,
-    "axisName": "Temp 3",
-    "axisNameFontFamily": "",
-    "axisNameFontSize": 15,
-    "axisNameFontSizeUnit": "px",
-    "axisNameFontWeight": "Bold",
-    "decimalPlaces": 2,
-    "unit": "",
-    "autoScaling": false,
-    "logarithmicScale": false,
-    "axisLabeling": "Number",
-    "labelFontColor": null,
-    "axisColor": {
-      "color": "rgba(25, 208, 80, 1)"
-    },
-    "axisNameFontColor": {
-      "color": "rgba(71, 148, 218, 1)"
-    }
-  }
-]
-</script>
+<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height="80" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-visibility="Visible" data-tchmi-show-legend="true" data-tchmi-show-menu-bar="true" data-tchmi-menu-bar-position="Top" data-tchmi-show-x-axis-name="true" data-tchmi-start="PT1m">
 
 
-<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
-[
-  {
-    "yAxisId": 1,
-    "legendName": "Heater 1 Temp",
-    "scaleFactor": 1.0,
-    "showAxis": true,
-    "lineWidth": 1,
-    "pointDot": false,
-    "pointDotRadius": 3,
-    "pointDotStrokeWidth": 1,
-    "lineColor": {
-      "color": "rgba(44, 9, 244, 1)"
-    },
-    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
-    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
-    "pointDotInStopMode": true,
-    "fillMode": "None",
-    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%",
-    "fillTransparency": 50.0,
-    "symbol": "ADS.PLC1.GVL_HMI.lr_Heater1"
-  },
-  {
-    "yAxisId": 2,
-    "legendName": "Heater 2 Temp",
-    "scaleFactor": 1.0,
-    "showAxis": true,
-    "lineWidth": 1,
-    "pointDot": false,
-    "pointDotRadius": 3,
-    "pointDotStrokeWidth": 1,
-    "lineColor": {
-      "color": "rgba(233, 14, 14, 1)"
-    },
-    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
-    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
-    "pointDotInStopMode": true,
-    "fillMode": "None",
-    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%",
-    "fillTransparency": 50.0,
-    "symbol": "ADS.PLC1.GVL_HMI.lr_Heater2"
-  },
-  {
-    "yAxisId": 3,
-    "legendName": "Heater 3 Temp",
-    "scaleFactor": 1.0,
-    "showAxis": true,
-    "lineWidth": 1,
-    "pointDot": false,
-    "pointDotRadius": 3,
-    "pointDotStrokeWidth": 1,
-    "lineColor": {
-      "color": "rgba(49, 238, 16, 1)"
-    },
-    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
-    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
-    "pointDotInStopMode": true,
-    "fillMode": "None",
-    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%",
-    "fillTransparency": 50.0,
-    "symbol": "ADS.PLC1.GVL_HMI.lr_Heater3"
-  }
-]
-</script>
-</div>
-<div id="TcHmiToggleButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Toggle Button" data-tchmi-top="379" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+
+
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiToggleButton.onToggleStateChanged",
+    "event": "%i%MyTrendData%/i%",
     "actions": [
       {
-        "objectType": "Condition",
+        "objectType": "JavaScript",
         "active": true,
-        "parts": [
-          {
-            "if": [
-              {
-                "compare1": {
-                  "objectType": "Symbol",
-                  "valueType": "tchmi:framework#/definitions/ToggleState",
-                  "symbolExpression": "%ctrl%TcHmiToggleButton::ToggleState%/ctrl%"
-                },
-                "compare2": {
-                  "objectType": "StaticValue",
-                  "valueType": "tchmi:framework#/definitions/ToggleState",
-                  "value": "Active"
-                },
-                "compareOperator": "==",
-                "logic": null
-              }
-            ],
-            "then": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription[0]::symbol%/ctrl%",
-                "value": {
-                  "objectType": "FunctionExpression",
-                  "functionExpression": "ADS.PLC1.GVL_HMI.lr_Heater1\r\n"
-                },
-                "asyncWait": true
-              }
-            ]
-          },
-          {
-            "else": [
-              {
-                "objectType": "WriteToSymbol",
-                "active": true,
-                "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription[0]::symbol%/ctrl%",
-                "value": {
-                  "objectType": "FunctionExpression",
-                  "functionExpression": "ADS.PLC1.GVL_HMI.lr_Heater2\r\n"
-                },
-                "asyncWait": true
-              }
-            ]
-          }
+        "sourceLines": [
+          "// get control",
+          "var ctrl = TcHmi.Controls.get(\"TcHmiTrendLineChart\");",
+          "",
+          "// internal symbol with historized symbol names / properties",
+          "var symb = new TcHmi.Symbol(\"%i%MyTrendData%/i%\");",
+          "",
+          "// value of internal symbol",
+          "var val;",
+          "",
+          "// line graph descriptions object",
+          "var desc = [];",
+          "",
+          "//History settings",
+          "        var settings = {",
+          "    INTERVAL: 'PT0.1S', ",
+          "    MAXENTRIES: 10000, ",
+          "    ROWLIMIT: 10000, ",
+          "    RECORDINGENABLED: true, ",
+          "        };",
+          "",
+          "// read internal symbol",
+          "symb.readEx(function (data) {",
+          "    // get value",
+          "    val = data.value;",
+          "    // successful read",
+          "    if (val) {",
+          "",
+          "",
+          "",
+          "",
+          "        // loop through internal symbol array",
+          "        val.forEach(e => {",
+          "",
+          "",
+          "            // if enabled",
+          "            if (e.Enabled) {",
+          "                TcHmi.Server.Historize.addEx2(e.Name, settings, { domain: 'TcHmiSqliteHistorize' }, {timeout: 2000}, function (data) {",
+          "                if (data.error === TcHmi.Errors.NONE) {",
+          "                    console.log('Worked');",
+          "                } else {",
+          "                    console.error('holy crap ' + data.error);",
+          "                }",
+          "            });",
+          "",
+          "",
+          "                // add symbol/properties to line graph description",
+          "                desc.push({ symbol: e.Name, lineWidth: 2, lineColor: e.Color });",
+          "            }",
+          "        });",
+          "",
+          "        // write to line graph descriptions to line graph control",
+          "        ctrl.setLineGraphDescriptions(desc);",
+          "    }",
+          "});"
         ],
-        "asyncWait": true
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
       }
     ]
   }
 ]
 </script>
+
+
+</div>
+<div id="TcHmiDatagrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="20" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="%" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-src-data="%i%MyTrendData|BindingMode=TwoWay%/i%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "Name",
+    "label": "Symbol Name",
+    "control": "TextBox",
+    "width": 200,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": false,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  },
+  {
+    "name": "Enabled",
+    "label": "Enabled",
+    "control": "CheckBox",
+    "width": 70,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": true,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  },
+  {
+    "name": "Color[color]",
+    "label": "Line Color",
+    "control": "TextBox",
+    "width": 150,
+    "widthUnit": "px",
+    "resize": true,
+    "sortable": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
 </div>
 </div>

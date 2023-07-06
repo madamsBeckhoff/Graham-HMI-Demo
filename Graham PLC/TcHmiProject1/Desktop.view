@@ -1,12 +1,4 @@
-<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100">
-  
-<div id="TcHmiContainer_Bottom" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="80" data-tchmi-left="0" data-tchmi-bottom="0" data-tchmi-right="0">
-
-<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
-"divider",
-"divider-bottom"
-]
-</script></div><div id="Navigation_Left" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiNavigation" data-tchmi-width="320" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-bottom="%ctrl%TcHmiContainer_Bottom::Height%/ctrl%" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-navigation-orientation="Vertical" data-tchmi-keep-lowest-level="true" data-tchmi-breadcrumb="%ctrl%Breadcrumb%/ctrl%">
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="%" data-tchmi-width="100" data-tchmi-height-unit="%" data-tchmi-height="100" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100">><div id="Navigation_Left" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiNavigation" data-tchmi-width="320" data-tchmi-left="0" data-tchmi-top="0" data-tchmi-target-region="%ctrl%Region_Center%/ctrl%" data-tchmi-navigation-orientation="Vertical" data-tchmi-keep-lowest-level="true" data-tchmi-breadcrumb="%ctrl%Breadcrumb%/ctrl%" data-tchmi-bottom="0" data-tchmi-bottom-unit="%">
 
 <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">[
 "divider",
@@ -235,7 +227,7 @@
     "timeDisplayLayout": "TimeDateMultiLine"
   }
 ]
-</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="358" data-tchmi-top="138" data-tchmi-scrolling="Yes" data-tchmi-bottom="86" data-tchmi-right="-38">
+</script></div><div id="Region_Center" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-left="358" data-tchmi-top="138" data-tchmi-scrolling="Yes" data-tchmi-bottom="0" data-tchmi-right="-38" data-tchmi-bottom-unit="%">
 
 <script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json"></script></div><div id="Breadcrumb" data-tchmi-type="TcHmi.Controls.BaseTemplate.TcHmiBreadcrumb" data-tchmi-height="32" data-tchmi-left="%f%%ctrl%Region_Center::Left%/ctrl%+ 16%/f%" data-tchmi-top="%f%%ctrl%Header_Top::Height%/ctrl%+ 16%/f%" data-tchmi-right="%f%%ctrl%Region_Center::Right%/ctrl%+ 16%/f%" data-tchmi-navigationcontrol="%ctrl%Navigation_Left%/ctrl%">
 
