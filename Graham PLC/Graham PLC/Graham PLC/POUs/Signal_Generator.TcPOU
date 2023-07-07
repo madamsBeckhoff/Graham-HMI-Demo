@@ -6,6 +6,7 @@ VAR
 	lr_Counter1: LREAL;
 	lr_Counter2: LREAL;
 	lr_Counter3: LREAL;
+	i:int;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -17,7 +18,17 @@ lr_Counter2:= lr_Counter2+0.006;
 GVL_HMI.lr_Heater2:= SIN(lr_Counter2)*120+180;
 
 lr_Counter3:= lr_Counter3+0.008;
-GVL_HMI.lr_Heater3:= COS(lr_Counter3)*130+190;]]></ST>
+GVL_HMI.lr_Heater3:= COS(lr_Counter3)*130+190;
+
+FOR i:=1 TO 20 BY 1 DO
+	GVL_HMI.TrendMe[i]:=GVL_HMI.lr_Heater1* INT_TO_LREAL(i)*0.05;
+END_FOR
+
+FOR i:=1 TO 499 BY 1 DO
+	GVL_HMI.HistoTrendData[i]:=GVL_HMI.HistoTrendData[i+1];
+END_FOR
+
+GVL_HMI.HistoTrendData[500]:=GVL_HMI.lr_Heater1;]]></ST>
     </Implementation>
     <LineIds Name="Signal_Generator">
       <LineId Id="7" Count="0" />
@@ -29,6 +40,14 @@ GVL_HMI.lr_Heater3:= COS(lr_Counter3)*130+190;]]></ST>
       <LineId Id="13" Count="0" />
       <LineId Id="15" Count="0" />
       <LineId Id="8" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="31" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

@@ -6,12 +6,15 @@ VAR_GLOBAL
 	lr_Heater1: LREAL;
 	lr_Heater2: LREAL;
 	lr_Heater3: LREAL;
+	TrendMe:ARRAY[1..20] OF LREAL;
 	bButton1:BOOL;
 	bButton2:BOOL;
 	bButton3:BOOL;
 	bSwitch1:BOOL;
 	bSwitch2:BOOL;
 	bSwitch3:BOOL;
+	
+	HistoTrendData: ARRAY[1..500] OF LrEAL;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

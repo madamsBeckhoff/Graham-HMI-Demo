@@ -2,6 +2,24 @@
     "commitInterval": "PT10S",
     "enableBackup": false,
     "historizedSymbolList": {
+        "ADS.PLC1.GVL_HMI.TrendMe": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "ADS.PLC1.GVL_HMI.TrendMe.0": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "ADS.PLC1.GVL_HMI.TrendMe.1": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
         "ADS.PLC1.GVL_HMI.lr_Heater1": {
             "interval": "PT0.1S",
             "maxEntries": 10000,
@@ -9,6 +27,66 @@
             "rowLimit": 10000
         },
         "ADS.PLC1.GVL_HMI.lr_Heater2": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "ADS.PLC1.GVL_HMI.lr_Heater3": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.MyTrend.0": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.MyTrend.1": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.0": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.1": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.15": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.2": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.3": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.TrendMe.4": {
+            "interval": "PT0.1S",
+            "maxEntries": 10000,
+            "recordingEnabled": true,
+            "rowLimit": 10000
+        },
+        "PLC1.GVL_HMI.Trendme.1": {
             "interval": "PT0.1S",
             "maxEntries": 10000,
             "recordingEnabled": true,
